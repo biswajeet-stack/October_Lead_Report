@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Power BI Report - October Monthly</title>
+    <title>Embedded Power BI Report - October</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,7 +21,11 @@
         .powerbi-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            /* This padding-bottom value (541.25 / 1140 * 100 = 47.478%) 
+              is calculated from your iframe's height and width 
+              to perfectly match its original aspect ratio.
+            */
+            padding-bottom: 47.478%; 
             height: 0;
             overflow: hidden;
             border-radius: 0.75rem; /* rounded-xl */
@@ -43,7 +47,7 @@
                 October Monthly Dashboard
             </h1>
             <p class="text-lg text-gray-500">
-                Live view of the 'October Monthly' Power BI report embedded below.
+                Live view of the 'October Power BI' report embedded below.
             </p>
         </header>
 
@@ -52,8 +56,8 @@
             
             <div class="powerbi-container">
                 <iframe 
-                    title="October Monthly Report" 
-                    src="PASTE_YOUR_NEW_EMBED_URL_HERE" 
+                    title="October Power BI" 
+                    src="https://app.powerbi.com/reportEmbed?reportId=4d875ac7-8ad3-4527-ad0f-2f0909e5873d&autoAuth=true&ctid=e14e73eb-5251-4388-8d67-8f9f2e2d5a46" 
                     frameborder="0" 
                     allowFullScreen="true">
                 </iframe>
